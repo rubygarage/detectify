@@ -7,11 +7,12 @@ Gem::Specification.new do |spec|
   spec.name          = 'detectify'
   spec.version       = Detectify::VERSION
   spec.authors       = ['Lukyanov Fedor']
-  spec.email         = ['lukyanov.f.ua@gmail.com']
+  spec.email         = ['fedor@rubygarage.org']
 
-  spec.summary       = 'Write a short summary, because Rubygems requires one.'
-  spec.description   = 'Write a longer description or delete this line.'
-  spec.homepage      = 'https://rubygarage.org'
+  spec.summary       = 'Detect ActiveRecord entity via domain or subdomain'
+  spec.description   = 'Detectify provides a simple way to retrieve an ActiveRecord entity' \
+                       'based on the domain/subdomain request information.'
+  spec.homepage      = 'https://github.com/rubygarage/detectify'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
