@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.license     = 'MIT'
   spec.homepage    = 'https://github.com/rubygarage/detectify'
   spec.summary     = 'Detect ActiveRecord entity via domain or subdomain'
-  spec.description = 'Detectify provides a simple way to retrieve an ActiveRecord entity' \
+  spec.description = 'Detectify provides a simple way to retrieve an ActiveRecord entity ' \
                      'based on the domain/subdomain request information.'
 
   spec.files                 = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
