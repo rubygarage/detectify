@@ -1,5 +1,5 @@
 # Detectify
-
+[![Gem Version](https://badge.fury.io/rb/detectify.svg)](https://badge.fury.io/rb/detectify)
 [![Code Climate](https://codeclimate.com/github/rubygarage/detectify/badges/gpa.svg)](https://codeclimate.com/github/rubygarage/detectify)
 [![Coverage Status](https://coveralls.io/repos/github/rubygarage/detectify/badge.svg?branch=master)](https://coveralls.io/github/rubygarage/detectify?branch=master)
 [![Build Status](https://travis-ci.org/rubygarage/detectify.svg?branch=master)](https://travis-ci.org/rubygarage/detectify)
