@@ -24,7 +24,7 @@ Start off by generating an initializer:
 
 this will create file `config/initializers/detectify.rb` in your application directory.
 
-You can configure Detectify for your application needs via initializer. After this you can access detected entity via: `env['Detectify-Entity']`.
+You can configure Detectify for your application needs via initializer. After this you can access detected entity via: `request.env['Detectify-Entity']`.
 
 ## Contributing
 
