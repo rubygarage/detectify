@@ -4,8 +4,8 @@ module Detectify
       attr_reader :domain, :subdomain
 
       def initialize(domain, subdomain)
-        @domain    = domain
-        @subdomain = subdomain
+        @domain    = domain.downcase if domain.is_a?(String)
+        @subdomain = subdomain.downcase if subdomain.is_a?(String)
       end
 
       def build
