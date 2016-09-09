@@ -13,11 +13,11 @@ module Detectify
       private
 
       def domain_clause
-        "#{Detectify.config.domain_column} = ?" if need_domain_clause?
+        "LOWER(#{Detectify.config.domain_column}) = ?" if need_domain_clause?
       end
 
       def subdomain_clause
-        "#{Detectify.config.subdomain_column} = ?" if need_subdomain_clause?
+        "LOWER(#{Detectify.config.subdomain_column}) = ?" if need_subdomain_clause?
       end
 
       def or_operator
