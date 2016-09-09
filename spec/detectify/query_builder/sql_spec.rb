@@ -9,14 +9,14 @@ RSpec.describe Detectify::QueryBuilder::SQL do
         let(:domain) { 'example.com' }
         let(:subdomain) { nil }
 
-        it { is_expected.to eq(['domain = ?', 'example.com']) }
+        it { is_expected.to eq(['LOWER(domain) = ?', 'example.com']) }
       end
 
       context 'with only subdomain' do
         let(:domain) { nil }
         let(:subdomain) { 'example' }
 
-        it { is_expected.to eq(['subdomain = ?', 'example']) }
+        it { is_expected.to eq(['LOWER(subdomain) = ?', 'example']) }
       end
 
       context 'with domain and subdomain' do
@@ -25,7 +25,7 @@ RSpec.describe Detectify::QueryBuilder::SQL do
 
         it do
           is_expected.to eq([
-            'domain = ? OR subdomain = ?', 'example.com', 'example'
+            'LOWER(domain) = ? OR LOWER(subdomain) = ?', 'example.com', 'example'
           ])
         end
       end
@@ -38,7 +38,7 @@ RSpec.describe Detectify::QueryBuilder::SQL do
         let(:domain) { 'example.com' }
         let(:subdomain) { nil }
 
-        it { is_expected.to eq(['domain = ?', 'example.com']) }
+        it { is_expected.to eq(['LOWER(domain) = ?', 'example.com']) }
       end
 
       context 'with only subdomain' do
@@ -52,7 +52,7 @@ RSpec.describe Detectify::QueryBuilder::SQL do
         let(:domain) { 'example.com' }
         let(:subdomain) { 'example' }
 
-        it { is_expected.to eq(['domain = ?', 'example.com']) }
+        it { is_expected.to eq(['LOWER(domain) = ?', 'example.com']) }
       end
 
       after { Detectify.reset_config }
@@ -72,14 +72,14 @@ RSpec.describe Detectify::QueryBuilder::SQL do
         let(:domain) { nil }
         let(:subdomain) { 'example' }
 
-        it { is_expected.to eq(['subdomain = ?', 'example']) }
+        it { is_expected.to eq(['LOWER(subdomain) = ?', 'example']) }
       end
 
       context 'with domain and subdomain' do
         let(:domain) { 'example.com' }
         let(:subdomain) { 'example' }
 
-        it { is_expected.to eq(['subdomain = ?', 'example']) }
+        it { is_expected.to eq(['LOWER(subdomain) = ?', 'example']) }
       end
 
       after { Detectify.reset_config }
