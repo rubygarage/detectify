@@ -6,6 +6,9 @@
 
 Detectify provides a simple way to retrieve an ActiveRecord entity based on the domain/subdomain request information.
 
+It’s a Ruby gem, similar to Houser, that helps you retrieve an Active Record entity from a database with a URL. You know Houser is a multi-tenancy gem that can send database requests using subdomain names. But Houser is a relatively old Ruby library. For modern Rails-based SaaS apps, we wanted more flexibility. That's why we've developed Detectify.
+For more information, you can read here [Detectify review](https://rubygarage.org/blog/how-we-retrieve-tenant-data-in-a-multi-tenant-app).
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,6 +18,8 @@ Add this line to your application's Gemfile:
 and then execute: `$ bundle`
 
 Finally, restart the server to apply the changes.
+
+Detectify only supports applications built with Ruby 2.2.2 and Rails 4.2 or higher.
 
 ## Usage
 
